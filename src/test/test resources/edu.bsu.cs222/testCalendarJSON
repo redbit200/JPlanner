@@ -1,0 +1,41 @@
+{
+    "days": [
+      {
+        "localDate": "2019-11-7",
+        "note": "",
+        "events": [
+          "CS222~15:30~16:45",
+          "CS230~14:00~15:15",
+          "Homework~18:00~19:00",
+          "Dinner~20:00~21:00"
+        ]
+      },
+      {
+        "localDate": "2019-11-9",
+        "note": "Stats homework due today",
+        "events": [
+          "Early Shift~06:00~12:00",
+          "Doctor's Appointment~13:00~14:30",
+          "Stats Homework~15:00~17:00",
+          "Party~18:00~22:00"
+          ]
+      },
+      {
+        "localDate": "2020-1-1",
+        "note": "New Years Day",
+        "events": [
+          "Holiday Hours~08:00~14:00",
+          "Visit Family~16:00~20:00"
+          ]
+      },
+      {
+        "localDate": "2020-1-8",
+        "note": "Stats homework due today",
+        "events": [
+          "New Job~08:00~17:00~Work",
+          "Dinner Date~18:00~20:00",
+          "Night Class~21:00~22:00"
+        ]
+      }
+    ]
+  }

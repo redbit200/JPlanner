@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.collections.FXCollections?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import jfxtras.scene.layout.HBox?>
+<?import jfxtras.scene.layout.VBox?>
+
+<AnchorPane fx:id="mainPane" styleClass="anchorPane" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.bsu.cs222.CreateEventSceneController">
+   <children>
+      <HBox fx:id="topBar" alignment="CENTER_RIGHT" prefHeight="54.0" prefWidth="975.0" spacing="25.0" styleClass="topBar">
+         <children>
+            <Button fx:id="mainSceneButton" mnemonicParsing="false" onAction="#handleMainSceneMenuButton" prefHeight="13.0" prefWidth="107.0" styleClass="menuButton" text="Main Menu">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Button>
+            <Button fx:id="writeNoteButton" mnemonicParsing="false" onAction="#handleWriteNoteMenuButton" prefHeight="13.0" prefWidth="107.0" styleClass="menuButton" text="Write Note">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Button>
+            <HBox alignment="CENTER" prefHeight="44.0" prefWidth="23.0">
+               <children>
+                  <Button fx:id="minimizeAppButton" alignment="TOP_CENTER" mnemonicParsing="false" onAction="#handleMinimizeButton" prefHeight="9.0" prefWidth="35.0" styleClass="topBarControls" text="--" textAlignment="CENTER" textFill="WHITE">
+                     <font>
+                        <Font name="Arial Bold" size="21.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="closeAppButton" alignment="BOTTOM_CENTER" mnemonicParsing="false" onAction="#handleCloseButton" prefHeight="12.0" prefWidth="32.0" styleClass="topBarControls" text="X" textFill="WHITE">
+                     <font>
+                        <Font name="Arial Black" size="15.0" />
+                     </font>
+                  </Button>
+               </children>
+            </HBox>
+         </children>
+         <padding>
+            <Insets bottom="5.0" left="15.0" right="15.0" top="5.0" />
+         </padding>
+      </HBox>
+      <VBox alignment="TOP_CENTER" layoutY="54.0" prefHeight="686.0" prefWidth="975.0" spacing="25.0" styleClass="mainContainer">
+         <padding>
+            <Insets bottom="15.0" left="20.0" right="20.0" top="15.0" />
+         </padding>
+         <children>
+            <VBox fillWidth="false" prefHeight="671.0" prefWidth="935.0" spacing="20.0" styleClass="blueGreyPane">
+               <children>
+                  <HBox prefHeight="119.0" prefWidth="920.0">
+                     <children>
+                        <VBox fillWidth="false" prefHeight="154.0" prefWidth="313.0">
+                           <children>
+                              <Label alignment="CENTER" prefHeight="55.0" prefWidth="243.0" styleClass="sceneTitle" text="Create an Event" textAlignment="CENTER" textFill="WHITE">
+                                 <font>
+                                    <Font name="System Bold" size="30.0" />
+                                 </font>
+                                 <padding>
+                                    <Insets bottom="5.0" left="10.0" right="10.0" top="5.0" />
+                                 </padding>
+                              </Label>
+                              <HBox prefHeight="10.0" prefWidth="243.0" style="-fx-background-color: #3867d6;" />
+                           </children>
+                        </VBox>
+                        <TextArea editable="false" prefHeight="154.0" prefWidth="690.0" styleClass="sceneDescription" text="To create an event, follow the prompt below. Please enter a event title, the event's date, a start and end time,  and then select the type of event. Once all the information is correct, click &quot;Add Event to Calendar&quot;. This will add the event to the calendar in the main menu with can be accessed at any time in the future." wrapText="true">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                        </TextArea>
+                     </children>
+                  </HBox>
+                  <VBox alignment="TOP_CENTER" fillWidth="false" prefHeight="434.0" prefWidth="920.0" spacing="30.0">
+                     <children>
+                        <HBox prefHeight="55.0" prefWidth="503.0">
+                           <children>
+                              <VBox fillWidth="false" prefHeight="100.0" prefWidth="176.0">
+                                 <children>
+                                    <Label alignment="CENTER" prefHeight="40.0" prefWidth="165.0" styleClass="sceneTitle" text="Event Title" textAlignment="CENTER" textFill="WHITE">
+                                       <font>
+                                          <Font name="System Bold" size="18.0" />
+                                       </font>
+                                       <padding>
+                                          <Insets bottom="5.0" left="10.0" right="10.0" top="5.0" />
+                                       </padding>
+                                    </Label>
+                                    <HBox prefHeight="8.0" prefWidth="165.0" style="-fx-background-color: #3867d6;" />
+                                 </children>
+                              </VBox>
+                              <TextField fx:id="eventTitleName" prefHeight="48.0" prefWidth="327.0">
+                                 <font>
+                                    <Font size="20.0" />
+                                 </font>
+                              </TextField>
+                           </children>
+                        </HBox>
+                        <HBox prefHeight="56.0" prefWidth="502.0">
+                           <children>
+                              <VBox fillWidth="false" prefHeight="100.0" prefWidth="176.0">
+                                 <children>
+                                    <Label alignment="CENTER" prefHeight="40.0" prefWidth="165.0" styleClass="sceneTitle" text="Event Date" textAlignment="CENTER" textFill="WHITE">
+                                       <font>
+                                          <Font name="System Bold" size="18.0" />
+                                       </font>
+                                       <padding>
+                                          <Insets bottom="5.0" left="10.0" right="10.0" top="5.0" />
+                                       </padding>
+                                    </Label>
+                                    <HBox prefHeight="8.0" prefWidth="165.0" style="-fx-background-color: #3867d6;" />
+                                 </children>
+                              </VBox>
+                              <HBox alignment="CENTER" prefHeight="48.0" prefWidth="334.0" spacing="20.0">
+                                 <children>
+                                    <DatePicker fx:id="eventDateSelected" editable="false" prefHeight="44.0" prefWidth="232.0" styleClass="datePicker" />
+                                    <Button mnemonicParsing="false" prefHeight="88.0" prefWidth="126.0" styleClass="secondary-button" text="Recurring Event?" textAlignment="CENTER" wrapText="true">
+                                       <font>
+                                          <Font size="13.0" />
+                                       </font>
+                                    </Button>
+                                 </children>
+                              </HBox>
+                           </children>
+                        </HBox>
+                        <HBox prefHeight="55.0" prefWidth="503.0">
+                           <children>
+                              <VBox fillWidth="false" prefHeight="100.0" prefWidth="176.0">
+                                 <children>
+                                    <Label alignment="CENTER" prefHeight="40.0" prefWidth="165.0" styleClass="sceneTitle" text="Start Time" textAlignment="CENTER" textFill="WHITE">
+                                       <font>
+                                          <Font name="System Bold" size="18.0" />
+                                       </font>
+                                       <padding>
+                                          <Insets bottom="5.0" left="10.0" right="10.0" top="5.0" />
+                                       </padding>
+                                    </Label>
+                                    <HBox prefHeight="8.0" prefWidth="165.0" style="-fx-background-color: #3867d6;" />
+                                 </children>
+                              </VBox>
+                              <TextField fx:id="eStartTime" prefHeight="48.0" prefWidth="327.0">
+                                 <font>
+                                    <Font size="20.0" />
+                                 </font>
+                              </TextField>
+                           </children>
+                        </HBox>
+                        <HBox prefHeight="55.0" prefWidth="503.0">
+                           <children>
+                              <VBox fillWidth="false" prefHeight="100.0" prefWidth="176.0">
+                                 <children>
+                                    <Label alignment="CENTER" prefHeight="40.0" prefWidth="165.0" styleClass="sceneTitle" text="End Time" textAlignment="CENTER" textFill="WHITE">
+                                       <font>
+                                          <Font name="System Bold" size="18.0" />
+                                       </font>
+                                       <padding>
+                                          <Insets bottom="5.0" left="10.0" right="10.0" top="5.0" />
+                                       </padding>
+                                    </Label>
+                                    <HBox prefHeight="8.0" prefWidth="165.0" style="-fx-background-color: #3867d6;" />
+                                 </children>
+                              </VBox>
+                              <TextField fx:id="eEndTime" prefHeight="48.0" prefWidth="327.0">
+                                 <font>
+                                    <Font size="20.0" />
+                                 </font>
+                              </TextField>
+                           </children>
+                        </HBox>
+                        <HBox fillHeight="false" prefHeight="59.0" prefWidth="503.0">
+                           <children>
+                              <VBox fillWidth="false" prefHeight="50.0" prefWidth="176.0">
+                                 <children>
+                                    <Label alignment="CENTER" prefHeight="40.0" prefWidth="165.0" styleClass="sceneTitle" text="Event Type" textAlignment="CENTER" textFill="WHITE">
+                                       <font>
+                                          <Font name="System Bold" size="18.0" />
+                                       </font>
+                                       <padding>
+                                          <Insets bottom="5.0" left="10.0" right="10.0" top="5.0" />
+                                       </padding>
+                                    </Label>
+                                    <HBox prefHeight="8.0" prefWidth="165.0" style="-fx-background-color: #3867d6;" />
+                                 </children>
+                              </VBox>
+                              <ChoiceBox fx:id="eventTypeChoice" prefHeight="49.0" prefWidth="328.0" styleClass="eventTypeChoiceBox" value="General">
+                                 <items>
+                                    <FXCollections fx:factory="observableArrayList">
+                                       <String fx:value="General" />
+                                       <String fx:value="Class" />
+                                       <String fx:value="Study Session" />
+                                       <String fx:value="Homework" />
+                                       <String fx:value="Work" />
+                                       <String fx:value="Project" />
+                                    </FXCollections>
+                                 </items>
+                              </ChoiceBox>
+                           </children>
+                        </HBox>
+                        <Button fx:id="createEventButton" mnemonicParsing="false" onAction="#handleCreateEventButton" prefHeight="48.0" prefWidth="178.0" styleClass="secondary-button" text="Add Event to Calendar" textFill="WHITE">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                        </Button>
+                     </children>
+                  </VBox>
+               </children>
+               <padding>
+                  <Insets bottom="25.0" right="15.0" top="25.0" />
+               </padding>
+            </VBox>
+         </children>
+      </VBox>
+      <HBox alignment="CENTER" prefHeight="54.0" prefWidth="343.0" styleClass="topBar">
+         <children>
+            <Label contentDisplay="CENTER" prefHeight="65.0" prefWidth="269.0" styleClass="appname-text" text="JPlanner" textAlignment="CENTER" textFill="WHITE">
+               <font>
+                  <Font name="System Bold Italic" size="30.0" />
+               </font>
+            </Label>
+         </children>
+      </HBox>
+   </children>
+</AnchorPane>
