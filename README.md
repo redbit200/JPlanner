@@ -1,5 +1,5 @@
 # JPlanner
-Made by Team B: Collin Stiner, Ben Malum, Noah Hensley, Jacob Silvers
+Made by Team B: Collin S., Ben M., Noah H., Jacob S.
 
 # Version
 0.1.0
